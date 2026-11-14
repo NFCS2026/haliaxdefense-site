@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haliax Defense — Wearable Intelligence &amp; Protective Consulting</title>
+<meta name="description" content="Haliax Defense develops wearable situational-awareness software and provides executive protection consulting.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preload" href="fonts/Panchang-Extrabold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/hero.webp" as="image">
+<style>
+@font-face{font-family:Panchang;src:url(fonts/Panchang-Semibold.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Panchang;src:url(fonts/Panchang-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Panchang;src:url(fonts/Panchang-Extrabold.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:Satoshi;src:url(fonts/Satoshi-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Satoshi;src:url(fonts/Satoshi-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Satoshi;src:url(fonts/Satoshi-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:JBM;src:url(fonts/JetBrainsMono-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:JBM;src:url(fonts/JetBrainsMono-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+:root{
+  --bg:#0a0b0c; --bg2:#111315; --line:rgba(232,228,218,.12); --line2:rgba(232,228,218,.22);
+  --text:#e8e4da; --muted:#9a978f; --faint:#6b6964; --amber:#f2a33a; --amber-d:#c97f1c;
+  --font-display:Panchang,"Arial Black",sans-serif; --font-body:Satoshi,system-ui,sans-serif; --font-mono:JBM,ui-monospace,monospace;
+  --gutter:clamp(20px,5vw,72px); --max:1320px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:#000;padding:8px 14px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.mono{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.mono b{color:var(--amber);font-weight:500}
+
+/* nav */
+header.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.nav.solid{background:rgba(10,11,12,.86);backdrop-filter:blur(10px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:44px}
+.brand span{font-family:var(--font-display);font-weight:800;font-size:17px;letter-spacing:.12em}
+.nav ul{display:flex;gap:34px;list-style:none}
+.nav ul a{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;border:1px solid var(--amber);color:#0a0b0c;background:var(--amber);cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--amber)}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line2)}
+.btn.ghost:hover{border-color:var(--amber);color:var(--amber)}
+.nav .btn{padding:10px 16px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;isolation:isolate}
+.hero picture,.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,11,12,.95) 0%,rgba(10,11,12,.6) 45%,rgba(10,11,12,.1) 75%),linear-gradient(0deg,var(--bg) 0%,rgba(10,11,12,0) 40%)}
+.hero .wrap{width:100%;padding-bottom:clamp(56px,10vh,120px)}
+.hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(52px,9.5vw,148px);line-height:.92;letter-spacing:-.01em;margin:22px 0 28px;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero p.lede{max-width:520px;font-size:18px;color:#cfcbc1}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.hud{position:absolute;right:var(--gutter);top:110px;text-align:right;display:grid;gap:6px}
+.hud .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-right:8px;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+.corner{position:absolute;width:22px;height:22px;border-color:var(--amber);border-style:solid;opacity:.7}
+
+/* sections */
+section{padding:clamp(80px,11vw,150px) 0;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:40px;align-items:end;margin-bottom:64px}
+.sec-head h2{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.6vw,48px);line-height:1.05;text-transform:uppercase;letter-spacing:-.005em}
+.sec-head p{color:var(--muted);max-width:560px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line2);border-left:1px solid var(--line)}
+.cap{padding:32px 28px 40px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;transition:background .3s}
+.cap:hover{background:var(--bg2)}
+.cap .idx{font-family:var(--font-mono);font-size:12px;color:var(--amber);letter-spacing:.14em}
+.cap h3{font-family:var(--font-display);font-weight:600;font-size:20px;text-transform:uppercase;margin:44px 0 14px;letter-spacing:.02em}
+.cap p{color:var(--muted);font-size:15px}
+.cap svg{width:34px;height:34px;color:var(--text);margin-top:22px}
+
+/* full bleed */
+.bleed{position:relative;padding:0;border-top:1px solid var(--line)}
+.bleed img{width:100%;height:min(78vh,760px);object-fit:cover}
+.bleed .over{position:absolute;inset:0;display:flex;align-items:center;background:linear-gradient(90deg,rgba(10,11,12,.9),rgba(10,11,12,.15) 70%)}
+.bleed blockquote{font-family:var(--font-display);font-weight:700;font-size:clamp(26px,3.8vw,54px);line-height:1.08;text-transform:uppercase;max-width:15ch}
+.bleed blockquote em{font-style:normal;color:var(--amber)}
+.bleed .mono{margin-top:26px}
+
+/* platform split */
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.split figure{position:relative;border:1px solid var(--line)}
+.split figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.split figcaption{position:absolute;left:16px;bottom:14px}
+.specs{list-style:none;border-top:1px solid var(--line2)}
+.specs li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.specs li .mono{padding-top:3px}
+.specs li strong{display:block;font-weight:700;font-size:17px;margin-bottom:4px}
+.specs li span{color:var(--muted);font-size:15px}
+
+/* sectors */
+.sectors{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}
+.sector{background:var(--bg);padding:40px 36px;display:flex;justify-content:space-between;gap:24px;align-items:flex-start;transition:background .3s}
+.sector:hover{background:var(--bg2)}
+.sector h3{font-family:var(--font-display);font-weight:600;font-size:clamp(18px,1.8vw,24px);text-transform:uppercase;margin-bottom:12px}
+.sector p{color:var(--muted);font-size:15px;max-width:44ch}
+
+/* briefing */
+.brief{position:relative;overflow:hidden}
+.brief::before{content:"";position:absolute;inset:0;background:url(assets/command.webp) center/cover;opacity:.22;z-index:-1}
+.brief::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(10,11,12,.7) 50%,var(--bg));z-index:-1}
+.brief{isolation:isolate;text-align:center}
+.brief h2{font-family:var(--font-display);font-weight:800;font-size:clamp(34px,6vw,84px);line-height:.98;text-transform:uppercase;margin:22px auto 24px;max-width:14ch}
+.brief p{color:#cfcbc1;max-width:560px;margin:0 auto 36px}
+
+footer{border-top:1px solid var(--line);padding:36px 0 44px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .mono{font-size:11px}
+
+/* dialog */
+dialog{margin:auto;background:var(--bg2);color:var(--text);border:1px solid var(--line2);padding:0;max-width:520px;width:calc(100% - 40px)}
+dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
+.dlg{padding:36px}
+.dlg h3{font-family:var(--font-display);font-weight:700;font-size:24px;text-transform:uppercase;margin:16px 0 14px}
+.dlg p{color:var(--muted);font-size:15px;margin-bottom:14px}
+.dlg .addr{font-family:var(--font-mono);font-size:14px;color:var(--amber);border:1px dashed var(--line2);padding:12px 14px;margin:6px 0 22px;user-select:all;word-break:break-all}
+.dlg .row{display:flex;gap:12px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hud .dot{animation:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .sec-head,.split{grid-template-columns:1fr}
+  .sec-head{gap:18px}
+  .nav ul{display:none}
+}
+@media (max-width:640px){
+  .grid4,.sectors{grid-template-columns:1fr}
+  .hud{display:none}
+  .hero::after{background:linear-gradient(0deg,var(--bg) 8%,rgba(10,11,12,.55) 60%,rgba(10,11,12,.35))}
+  .hero img.bg{object-position:70% 30%}
+  .specs li{grid-template-columns:1fr;gap:6px}
+  .sector{padding:32px 24px}
+  .nav .btn{display:none}
+  .bleed img{height:62vh}
+  .cap h3{margin-top:28px}
+}
+.brand span small{display:block;font-family:var(--font-mono);font-weight:500;font-size:9px;letter-spacing:.42em;color:var(--amber);margin-top:2px}
+.brand span{line-height:1}
+.h2{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.6vw,48px);line-height:1.05;text-transform:uppercase;margin:18px 0 22px}
+.split.rev{grid-template-columns:1fr 1.1fr}
+.road{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line2);counter-reset:r}
+.road li{padding:30px 26px 10px 0;position:relative}
+.road li::before{content:"";position:absolute;top:-6px;left:0;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--line2)}
+.road li.now::before{background:var(--amber);border-color:var(--amber);box-shadow:0 0 0 6px rgba(242,163,58,.15)}
+.road h3{font-family:var(--font-display);font-weight:600;font-size:18px;text-transform:uppercase;margin:16px 0 10px}
+.road p{color:var(--muted);font-size:15px}
+.partners{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:0 auto 40px;max-width:1000px;text-align:left}
+.pcard{background:rgba(10,11,12,.82);padding:28px 26px}
+.pcard p{color:var(--muted);font-size:15px;margin:12px 0 0;max-width:none}
+.legal{font-size:12px;color:var(--faint);margin-top:28px!important}
+@media (max-width:980px){.road{grid-template-columns:repeat(2,1fr)}.split.rev{grid-template-columns:1fr}.split.rev figure{order:-1}}
+@media (max-width:640px){.road,.partners{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Haliax home"><img src="assets/mark.png" alt="" width="44" height="30"><span>HALIAX<small>DEFENSE</small></span></a>
+    <nav aria-label="Primary"><ul>
+      <li><a href="#capability">Capability</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#protection">Protection</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#partner">Partner</a></li>
+    </ul></nav>
+    <button class="btn" data-brief>Request briefing</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" style="border-top:0;padding:0">
+  <img class="bg" src="assets/hero.webp" alt="Operator wearing smart glasses on a rooftop at night, overlooking a city" width="1920" height="1080" fetchpriority="high">
+  <div class="hud mono" aria-hidden="true">
+    <div><span class="dot"></span>SYSTEM <b>ACTIVE</b></div>
+    <div>AUDIO ANALYTICS · <b>ON</b></div>
+    <div>VIDEO ANALYTICS · <b>ON</b></div>
+  </div>
+  <div class="wrap">
+    <div class="mono">Haliax Defense &nbsp;//&nbsp; Wearable intelligence &nbsp;//&nbsp; Protective consulting</div>
+    <h1>See<br><em>first.</em></h1>
+    <p class="lede">Situational-awareness software for smart glasses, and executive protection consulting from the operators who built it. For teams who can't afford to miss anything.</p>
+    <div class="ctas">
+      <button class="btn" data-brief>Request a briefing</button>
+      <a class="btn ghost" href="#capability">Capabilities</a>
+    </div>
+  </div>
+</section>
+
+<section id="capability">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="mono"><b>01</b> &nbsp;Capability</div><h2 style="margin-top:18px">An intelligence layer for every operator</h2></div>
+      <p>Haliax turns off-the-shelf smart glasses into a force multiplier. It listens, watches and translates, then tells the operator only what matters.</p>
+    </div>
+    <div class="grid4">
+      <article class="cap reveal">
+        <div class="idx">HEAR</div>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 16h3l3-7 4 14 4-18 4 15 3-4h3"/></svg>
+        <h3>Audio awareness</h3>
+        <p>Picks out key words, alarms and sudden sounds in the noise, and alerts the operator to what they missed.</p>
+      </article>
+      <article class="cap reveal">
+        <div class="idx">TRANSLATE</div>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h13M10.5 4v3M7 7c1 5 4 9 9 11M14 7c-1 5-4 9-9 12M18 28l5-12 5 12M20 24h6"/></svg>
+        <h3>Live translation</h3>
+        <p>Foreign speech and signage, translated and delivered straight to the operator's ear.</p>
+      </article>
+      <article class="cap reveal">
+        <div class="idx">SEE</div>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="16" cy="16" r="5"/><circle cx="16" cy="16" r="1.4" fill="currentColor"/><path d="M2 16s5-9 14-9 14 9 14 9-5 9-14 9S2 16 2 16Z"/></svg>
+        <h3>Scene awareness</h3>
+        <p>Reads the environment through the glasses' camera and flags potential hazards before they reach you.</p>
+      </article>
+      <article class="cap reveal">
+        <div class="idx">CONTROL</div>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="7" width="26" height="8" rx="4"/><circle cx="25" cy="11" r="2.4" fill="currentColor"/><rect x="3" y="18" width="26" height="8" rx="4"/><circle cx="7" cy="22" r="2.4"/></svg>
+        <h3>Operator control</h3>
+        <p>Audio and video analytics switch on and off independently. The operator decides, every time.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bleed" aria-label="Software, not hardware">
+  <img src="assets/lens.webp" alt="Macro view of a tiny camera lens built into smart-glasses frames" width="1920" height="1080" loading="lazy">
+  <div class="over"><div class="wrap">
+    <blockquote class="reveal">Software, <em>not</em> hardware.</blockquote>
+    <div class="mono reveal">Runs on the glasses your teams already wear</div>
+  </div></div>
+</section>
+
+<section id="platform">
+  <div class="wrap split">
+    <figure class="reveal">
+      <img src="assets/perimeter.webp" alt="Operator scanning a port perimeter fence at night" width="1600" height="900" loading="lazy">
+      <figcaption class="mono"><b>●</b> Perimeter // Night ops</figcaption>
+    </figure>
+    <div>
+      <div class="mono reveal"><b>02</b> &nbsp;Platform</div>
+      <h2 class="reveal" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.6vw,48px);line-height:1.05;text-transform:uppercase;margin:18px 0 36px">Built for the field</h2>
+      <ul class="specs">
+        <li class="reveal"><div class="mono">Hardware</div><div><strong>Platform-agnostic</strong><span>Designed to run across leading smart-glasses platforms, with no proprietary headset to buy.</span></div></li>
+        <li class="reveal"><div class="mono">Processing</div><div><strong>On-device first</strong><span>Core analysis runs on the operator's phone, without depending on the cloud.</span></div></li>
+        <li class="reveal"><div class="mono">Privacy</div><div><strong>Nothing stored by default</strong><span>Alerts, not archives. Built to respect the people around the operator.</span></div></li>
+        <li class="reveal"><div class="mono">Deployment</div><div><strong>Consumer to enterprise</strong><span>One core, scaled from individual protectors to full security teams.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="protection">
+  <div class="wrap split rev">
+    <div>
+      <div class="mono reveal"><b>03</b> &nbsp;Protective consulting</div>
+      <h2 class="reveal h2">Protection, from the people in the field</h2>
+      <p class="reveal" style="color:var(--muted);max-width:52ch;margin-bottom:30px">Haliax Defense pairs its technology with hands-on protective consulting. Decades of security operations, touring and event work, applied to your people and your sites.</p>
+      <ul class="specs">
+        <li class="reveal"><div class="mono">Advance</div><div><strong>Advance work &amp; site surveys</strong><span>Routes, venues and lodging assessed before your principal arrives.</span></div></li>
+        <li class="reveal"><div class="mono">Assess</div><div><strong>Threat &amp; vulnerability assessments</strong><span>Clear, practical reports on risk to people, property and events.</span></div></li>
+        <li class="reveal"><div class="mono">Plan</div><div><strong>Protective detail planning</strong><span>Staffing, posts, communications and contingencies for every assignment.</span></div></li>
+        <li class="reveal"><div class="mono">Events</div><div><strong>Event &amp; tour security consulting</strong><span>Crowd, venue and backstage planning for live events and touring.</span></div></li>
+      </ul>
+    </div>
+    <figure class="reveal">
+      <img src="assets/command.webp" alt="Analysts watching a wall of map screens in a dark operations room" width="1600" height="900" loading="lazy">
+      <figcaption class="mono"><b>●</b> Operations // Planning</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="sectors">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="mono"><b>04</b> &nbsp;Sectors</div><h2 style="margin-top:18px">Where awareness decides outcomes</h2></div>
+      <p>From venue floors to critical infrastructure, Haliax is built for teams whose job is to notice first.</p>
+    </div>
+    <div class="sectors">
+      <div class="sector reveal"><div><h3>Defense &amp; government</h3><p>Situational awareness and language support for personnel in complex, multilingual environments.</p></div><span class="mono">01</span></div>
+      <div class="sector reveal"><div><h3>Executive protection</h3><p>A second set of eyes and ears for close-protection details and advance teams.</p></div><span class="mono">02</span></div>
+      <div class="sector reveal"><div><h3>Event &amp; venue security</h3><p>Crowd-scale awareness for guards and supervisors working loud, busy spaces.</p></div><span class="mono">03</span></div>
+      <div class="sector reveal"><div><h3>Critical infrastructure</h3><p>Perimeter and site patrol support for ports, utilities and industrial facilities.</p></div><span class="mono">04</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="mono"><b>05</b> &nbsp;Development</div><h2 style="margin-top:18px">Roadmap</h2></div>
+      <p>Haliax is in active development. Partner capital moves every phase faster.</p>
+    </div>
+    <ol class="road">
+      <li class="reveal now"><div class="mono"><b>Phase 01</b> · In progress</div><h3>Core software</h3><p>Phone app with audio awareness, live translation and scene awareness, each switched on and off by the operator.</p></li>
+      <li class="reveal"><div class="mono"><b>Phase 02</b> · Next</div><h3>Smart-glasses integration</h3><p>Connecting the core to leading smart-glasses platforms.</p></li>
+      <li class="reveal"><div class="mono"><b>Phase 03</b> · Target 2027</div><h3>Field pilots</h3><p>Pilots with security, protection and event teams to prove performance in the field.</p></li>
+      <li class="reveal"><div class="mono"><b>Phase 04</b> · Planned</div><h3>Enterprise &amp; government</h3><p>Team management, training and offerings for contractors and agencies.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="brief" id="partner">
+  <div class="wrap">
+    <div class="mono reveal"><b>06</b> &nbsp;Partner with Haliax</div>
+    <h2 class="reveal">Build it with us</h2>
+    <p class="reveal">Haliax is in private development. Briefings for qualified partners are held under NDA.</p>
+    <div class="partners">
+      <div class="pcard reveal"><div class="mono"><b>Investors</b></div><p>Early backers help fund development and receive priority access to briefings.</p></div>
+      <div class="pcard reveal"><div class="mono"><b>Contractors &amp; primes</b></div><p>Teaming, integration and licensing for defense and security programs.</p></div>
+      <div class="pcard reveal"><div class="mono"><b>Pilot partners</b></div><p>Security and protection teams ready to test Haliax in the field.</p></div>
+    </div>
+    <button class="btn reveal" data-brief>Request a briefing</button>
+    <p class="legal">Nothing on this site is an offer to sell, or a solicitation of an offer to buy, any security.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Haliax home"><img src="assets/mark.png" alt="" width="44" height="30"><span>HALIAX<small>DEFENSE</small></span></a>
+    <div class="mono">© 2026 Haliax Defense · Confidential preview · In development</div>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg">
+    <div class="mono"><b>●</b> Secure channel</div>
+    <h3 id="dlg-title">Request a briefing</h3>
+    <p>Email the team with your name, organization and area of interest. Briefings are held under NDA.</p>
+    <div class="addr" id="addr">briefings@haliaxdefense.com</div>
+    <div class="row">
+      <a class="btn" href="mailto:briefings@haliaxdefense.com?subject=Haliax%20briefing%20request">Open email</a>
+      <button class="btn ghost" id="copy">Copy address</button>
+      <button class="btn ghost" id="close">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('solid',scrollY>40);onScroll();addEventListener('scroll',onScroll,{passive:true});
+const dlg=document.getElementById('dlg');
+document.querySelectorAll('[data-brief]').forEach(b=>b.addEventListener('click',()=>dlg.showModal()));
+document.getElementById('close').onclick=()=>dlg.close();
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+document.getElementById('copy').onclick=async e=>{
+  try{await navigator.clipboard.writeText('briefings@haliaxdefense.com');e.target.textContent='Copied'}
+  catch{const r=document.createRange();r.selectNodeContents(document.getElementById('addr'));const s=getSelection();s.removeAllRanges();s.addRange(r);e.target.textContent='Selected — copy it'}
+};
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
