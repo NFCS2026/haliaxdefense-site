@@ -196,7 +196,10 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
 .steps h3{font-family:var(--font-display);font-weight:600;font-size:16px;text-transform:uppercase;margin:12px 0 8px}
 .steps p{color:var(--muted);font-size:14px}
 .origin{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
-.origin img{width:100%;max-width:560px;margin:0 auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
+.origin figure>img{width:100%;max-width:560px;margin:0 auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
+.flight{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,2vw,18px);max-width:560px;margin:18px auto 0}
+.flight img{width:100%;filter:drop-shadow(0 10px 20px rgba(0,0,0,.6))}
+.flight img:last-child{filter:drop-shadow(0 0 1px rgba(232,228,218,.35)) drop-shadow(0 10px 20px rgba(0,0,0,.6))}
 .origin p{color:var(--muted);max-width:52ch;margin-bottom:16px}
 .origin .sig{display:flex;align-items:center;gap:14px;margin-top:30px}
 .origin .sig .hm{width:30px;height:30px}
@@ -357,7 +360,8 @@ footer .left{display:flex;align-items:center;gap:22px}
 
 <section id="origin" class="rel">
   <div class="wrap origin">
-    <figure class="reveal"><img src="assets/eagle.webp" alt="The Haliax eagle: a gunmetal sea eagle with a camera-lens eye and amber sound waves" width="600" height="409" loading="lazy"></figure>
+    <figure class="reveal"><img src="assets/eagle-amber.webp" alt="The Haliax eagle: a sea eagle with a camera-lens eye and sound waves" width="600" height="409" loading="lazy">
+      <div class="flight" aria-hidden="true"><img src="assets/eagle.webp" alt="" width="600" height="409" loading="lazy"><img src="assets/eagle-bone.webp" alt="" width="600" height="409" loading="lazy"><img src="assets/eagle-gunmetal-blue.webp" alt="" width="600" height="409" loading="lazy"><img src="assets/eagle-blackout.webp" alt="" width="600" height="409" loading="lazy"></div></figure>
     <div>
       <div class="mono reveal"><b>05</b> &nbsp;The name</div>
       <h2 class="reveal h2">Named for the sea eagle</h2>
@@ -422,14 +426,14 @@ footer .left{display:flex;align-items:center;gap:22px}
 
 <footer>
   <div class="wrap">
-    <div class="left"><a class="brand" href="#top" aria-label="Haliax home"><img src="assets/mark.svg" alt="" width="34" height="34"><span>HALIAX<small>DEFENSE</small></span></a><img class="foot-eagle" src="assets/eagle.webp" alt="" width="600" height="409" loading="lazy"></div>
+    <div class="left"><a class="brand" href="#top" aria-label="Haliax home"><img src="assets/mark.svg" alt="" width="34" height="34"><span>HALIAX<small>DEFENSE</small></span></a><img class="foot-eagle" src="assets/eagle-bone.webp" alt="" width="600" height="409" loading="lazy"></div>
     <div class="mono">hq@haliaxdefense.com &nbsp;·&nbsp; © 2026 Haliax Defense · Los Angeles, California</div>
   </div>
 </footer>
 
 <dialog id="dlg" aria-labelledby="dlg-title">
   <div class="dlg">
-    <img class="eg" src="assets/eagle.webp" alt="" width="600" height="409">
+    <img class="eg" src="assets/eagle-gunmetal-blue.webp" alt="" width="600" height="409">
     <div class="mono"><svg class="hm" viewBox="0 0 100 100" aria-hidden="true"><path d="M12 24 L24 12 L32 12 L32 88 L12 88 Z M68 12 L76 12 L88 24 L88 88 L68 88 Z M32 56 L50 45 L68 56 L68 67 L50 56 L32 67 Z" fill="currentColor"/><path fill="#F2A33A" d="M50 27 L56.5 33.5 L50 40 L43.5 33.5 Z"/></svg>Secure channel</div>
     <h3 id="dlg-title">Contact Haliax</h3>
     <p>Email the team with your name, organization and what you need: consulting, training or a technology briefing. Conversations are confidential, and technology briefings are held under NDA.</p>
