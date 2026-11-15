@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Haliax Defense — Wearable Intelligence &amp; Protective Consulting</title>
 <meta name="description" content="Haliax Defense develops wearable situational-awareness software and provides executive protection consulting.">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://haliaxdefense.com/">
+<meta property="og:title" content="Haliax Defense — See first.">
+<meta property="og:description" content="Wearable intelligence software and protective consulting for security teams, executive protection and defense.">
+<meta property="og:url" content="https://haliaxdefense.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://haliaxdefense.com/assets/hero.webp">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preload" href="fonts/Panchang-Extrabold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/hero.webp" as="image">
@@ -41,7 +47,7 @@ header.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,
 header.nav.solid{background:rgba(10,11,12,.86);backdrop-filter:blur(10px);border-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{width:44px}
+.brand img{width:34px;height:34px}
 .brand span{font-family:var(--font-display);font-weight:800;font-size:17px;letter-spacing:.12em}
 .nav ul{display:flex;gap:34px;list-style:none}
 .nav ul a{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
@@ -170,7 +176,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Haliax home"><img src="assets/mark.png" alt="" width="44" height="30"><span>HALIAX<small>DEFENSE</small></span></a>
+    <a class="brand" href="#top" aria-label="Haliax home"><img src="assets/mark.svg" alt="" width="34" height="34"><span>HALIAX<small>DEFENSE</small></span></a>
     <nav aria-label="Primary"><ul>
       <li><a href="#capability">Capability</a></li>
       <li><a href="#platform">Platform</a></li>
@@ -292,8 +298,12 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
     <div class="sectors">
       <div class="sector reveal"><div><h3>Defense &amp; government</h3><p>Situational awareness and language support for personnel in complex, multilingual environments.</p></div><span class="mono">01</span></div>
       <div class="sector reveal"><div><h3>Executive protection</h3><p>A second set of eyes and ears for close-protection details and advance teams.</p></div><span class="mono">02</span></div>
-      <div class="sector reveal"><div><h3>Event &amp; venue security</h3><p>Crowd-scale awareness for guards and supervisors working loud, busy spaces.</p></div><span class="mono">03</span></div>
-      <div class="sector reveal"><div><h3>Critical infrastructure</h3><p>Perimeter and site patrol support for ports, utilities and industrial facilities.</p></div><span class="mono">04</span></div>
+      <div class="sector reveal"><div><h3>Airports &amp; transit</h3><p>Awareness for screening, patrol and terminal staff working crowded, multilingual spaces.</p></div><span class="mono">03</span></div>
+      <div class="sector reveal"><div><h3>Stadiums &amp; live events</h3><p>Stewards and guards spread across the venue, each one alert to what the cameras can't see.</p></div><span class="mono">04</span></div>
+      <div class="sector reveal"><div><h3>Casinos &amp; hospitality</h3><p>Floor staff who notice first, on busy floors where fixed cameras leave gaps.</p></div><span class="mono">05</span></div>
+      <div class="sector reveal"><div><h3>Retail loss prevention</h3><p>Awareness for loss-prevention teams on the move, without a store-wide camera upgrade.</p></div><span class="mono">06</span></div>
+      <div class="sector reveal"><div><h3>Critical infrastructure</h3><p>Perimeter and site patrol support for ports, utilities and industrial facilities.</p></div><span class="mono">07</span></div>
+      <div class="sector reveal"><div><h3>People move. Cameras don't.</h3><p>Cameras are fixed, costly and leave blind spots. Your people are already posted, and they move and react faster. Haliax makes each of them a sensor.</p></div><span class="mono">08</span></div>
     </div>
   </div>
 </section>
@@ -331,8 +341,8 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
 
 <footer>
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Haliax home"><img src="assets/mark.png" alt="" width="44" height="30"><span>HALIAX<small>DEFENSE</small></span></a>
-    <div class="mono">© 2026 Haliax Defense · Confidential preview · In development</div>
+    <a class="brand" href="#top" aria-label="Haliax home"><img src="assets/mark.svg" alt="" width="34" height="34"><span>HALIAX<small>DEFENSE</small></span></a>
+    <div class="mono">© 2026 Haliax Defense · Los Angeles, California</div>
   </div>
 </footer>
 
@@ -341,9 +351,9 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
     <div class="mono"><b>●</b> Secure channel</div>
     <h3 id="dlg-title">Request a briefing</h3>
     <p>Email the team with your name, organization and area of interest. Briefings are held under NDA.</p>
-    <div class="addr" id="addr">briefings@haliaxdefense.com</div>
+    <div class="addr" id="addr">hq@haliaxdefense.com</div>
     <div class="row">
-      <a class="btn" href="mailto:briefings@haliaxdefense.com?subject=Haliax%20briefing%20request">Open email</a>
+      <a class="btn" href="mailto:hq@haliaxdefense.com?subject=Haliax%20briefing%20request">Open email</a>
       <button class="btn ghost" id="copy">Copy address</button>
       <button class="btn ghost" id="close">Close</button>
     </div>
@@ -358,7 +368,7 @@ document.querySelectorAll('[data-brief]').forEach(b=>b.addEventListener('click',
 document.getElementById('close').onclick=()=>dlg.close();
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 document.getElementById('copy').onclick=async e=>{
-  try{await navigator.clipboard.writeText('briefings@haliaxdefense.com');e.target.textContent='Copied'}
+  try{await navigator.clipboard.writeText('hq@haliaxdefense.com');e.target.textContent='Copied'}
   catch{const r=document.createRange();r.selectNodeContents(document.getElementById('addr'));const s=getSelection();s.removeAllRanges();s.addRange(r);e.target.textContent='Selected — copy it'}
 };
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
