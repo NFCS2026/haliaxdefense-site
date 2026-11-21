@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Haliax Command | Hardware-Agnostic Edge AI Platform</title>
-<meta name="description" content="Haliax Command is a patent-pending edge AI platform in development for smart eyewear, body cameras and drone feeds. Explore the CES 2027 hardware test lab.">
+<title>Haliax Command | Role-Specific Edge AI Apps</title>
+<meta name="description" content="Haliax Command is a family of role-specific edge AI apps in development, with separate downloads, industry databases, and access controls.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://haliaxdefense.com/">
-<meta property="og:title" content="Haliax Command | One Edge AI Software Layer">
-<meta property="og:description" content="A patent-pending platform in development for role-based situational awareness across compatible eyewear, body cameras and drone feeds.">
+<meta property="og:title" content="Haliax Command | Separate Apps for Separate Roles">
+<meta property="og:description" content="A family of role-specific edge AI apps in development. Users download the app for their job, with access limited to their authorization.">
 <meta property="og:url" content="https://haliaxdefense.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://haliaxdefense.com/assets/hero.webp">
@@ -231,7 +231,6 @@ footer .left{display:flex;align-items:center;gap:22px}
 .command-hero::after{background:linear-gradient(90deg,rgba(10,11,12,.96) 3%,rgba(10,11,12,.73) 45%,rgba(10,11,12,.26) 100%),linear-gradient(0deg,var(--bg),transparent 60%)}
 .command-hero h1{max-width:985px;font-size:clamp(29px,4.3vw,62px);line-height:1.06;letter-spacing:-.035em;text-transform:none;margin:22px 0}
 .command-hero h1 em{display:block;margin-top:7px;font-size:.83em;line-height:1.1}
-@media(min-width:980px){.command-hero h1 .headline-unit{white-space:nowrap}}
 .command-hero p.lede{max-width:680px;font-size:clamp(16px,1.6vw,19px)}
 .command-hero .status{margin-top:16px}
 .command-hero .ctas{margin-top:25px}
@@ -287,9 +286,9 @@ footer .left{display:flex;align-items:center;gap:22px}
   </div>
   <div class="wrap">
     <div class="mono"><b>Haliax Command</b> &nbsp;//&nbsp; Patent pending</div>
-    <h1>One Edge AI <span class="headline-unit">Software Layer.</span> <em>Every Mission, Clearance, and Hardware Endpoint.</em></h1>
-    <p class="lede">Haliax Command is a hardware-agnostic platform designed to provision real-time situational awareness, trauma support, and post-incident review across compatible smart eyewear, police body cameras, and NDAA-compliant drone platforms.</p>
-    <p class="mono status"><b>In development</b> &nbsp;·&nbsp; Hardware integrations planned</p>
+    <h1>Edge AI for the job. <em>Separate apps for separate roles.</em></h1>
+    <p class="lede">Haliax Command is a family of planned apps for field medics, surgical teams, law enforcement and military users. Each team downloads the app for its job, and each industry has a separate database and access controls.</p>
+    <p class="mono status"><b>In development</b> &nbsp;·&nbsp; Role-specific downloads and hardware integrations planned</p>
     <div class="ctas">
       <a class="btn" href="https://gofund.me/0aeb48cb3" target="_blank" rel="noopener noreferrer">Back Our CES 2027 Hardware Test Lab <span aria-hidden="true">↗</span></a>
       <a class="btn ghost" href="#defense-commercial">Watch the concept film</a>
@@ -307,23 +306,24 @@ footer .left{display:flex;align-items:center;gap:22px}
 <section class="command-block" id="architecture">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="mono"><b>02</b> &nbsp;Core engine</div><h2>Role and clearance control</h2></div>
-      <p>The proposed Haliax Command Database is organized by role and security-clearance tier. It is designed to provision only the edge AI models and heads-up display (HUD) modules authorized for a user’s verified role, agency-defined clearance and active shift mode.</p>
+      <div><div class="mono"><b>02</b> &nbsp;App distribution + data separation</div><h2>Separate apps. Separate industry databases.</h2></div>
+      <p>The proposed distribution model separates apps by job. Field medic, surgical, law-enforcement and military users would install distinct apps, not unlock different professions inside one app. An organization can restrict a download to users whose role and, where required, clearance it has verified.</p>
     </div>
     <ol class="command-rail">
-      <li><div class="mono"><b>01</b> &nbsp;Authenticate</div><h3>Verify user and device</h3><p>A compatible device checks in with a verified user identity, an approved device identity, and an agency-managed assignment. Connecting a device does not grant access by itself.</p></li>
-      <li><div class="mono"><b>02</b> &nbsp;Provision</div><h3>Load only approved modules</h3><p>The role, clearance and mode determine which models and HUD modules can run on the endpoint or its paired edge device. The same policy can apply across supported eyewear, body cameras and drone feeds.</p></li>
-      <li><div class="mono"><b>03</b> &nbsp;Re-evaluate</div><h3>Reassign or revoke access</h3><p>The zero-trust design calls for rechecking authorization at shift handoff, revoking access on connected devices, and expiring time-limited access if a device is offline.</p></li>
+      <li><div class="mono"><b>01</b> &nbsp;Verify eligibility</div><h3>Match the app to the job</h3><p>Verify the person’s role and any organization-specific requirements before granting access to a restricted app. Approval for one app does not grant access to any other app.</p></li>
+      <li><div class="mono"><b>02</b> &nbsp;Install separately</div><h3>Download the tools you need</h3><p>Each phone app would include only its own workflows and models. If an app connects to compatible eyewear, a body camera or another endpoint, it supplies only the modules intended for that job.</p></li>
+      <li><div class="mono"><b>03</b> &nbsp;Limit access</div><h3>Enforce permissions inside the app</h3><p>Sign-in, assignment and clearance can limit features within each app. A change in shift can affect those permissions; it cannot turn a medic app into a military or surgical app.</p></li>
     </ol>
-    <p class="command-caption">The goal is fast shift reassignment without giving operators more access than they need. A clearance tier governs access inside Haliax Command; it does not confer a government security clearance or authorize classified workloads.</p>
+    <div class="note"><p><strong>Separate data by industry.</strong> The design calls for distinct databases for healthcare, public safety and defense, with their own access policies. Within each industry, apps and organizations get only the data they are authorized to use. Downloading an app does not grant access to another app or industry database.</p></div>
+    <p class="command-caption">Organization-defined access tiers apply only where required. They do not confer government security clearance or authorize classified workloads.</p>
   </div>
 </section>
 
 <section class="command-block" id="dual-mode">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="mono"><b>03</b> &nbsp;Body cameras + tactical eyewear</div><h2>Two modes. One software layer.</h2></div>
-      <p>One policy layer is designed to switch compatible devices between on-shift assistance and authorized review or training. Live alerts and retrospective analysis serve different users and are governed separately.</p>
+      <div><div class="mono"><b>03</b> &nbsp;Law enforcement app concept</div><h2>Two modes for law enforcement</h2></div>
+      <p>Within the proposed law-enforcement app, authorized users could use live assistance or review and training features on supported hardware. Switching modes changes the workflow inside that app, not the user’s profession or access to other Haliax apps.</p>
     </div>
     <div class="command-cards">
       <article class="command-card">
@@ -353,17 +353,17 @@ footer .left{display:flex;align-items:center;gap:22px}
   <div class="wrap">
     <div class="sec-head">
       <div><div class="mono"><b>04</b> &nbsp;Trauma + clinical workflow concepts</div><h2>Calm Medic</h2></div>
-      <p>A proposed voice and vision assistant for trained responders and clinicians, from documenting care at the point of injury to handing information to the next team.</p>
+      <p>Two distinct medical app concepts: a field app for trained responders and a separately downloaded clinical app for authorized hospital teams. They could exchange an approved handoff without sharing app access.</p>
     </div>
     <div class="command-cards">
       <article class="command-card">
         <div class="mono"><b>Field</b> &nbsp;TCCC / STOP THE BLEED concepts</div>
-        <h3>Bleeding-control support</h3>
+        <h3>Calm Medic Field</h3>
         <p>Explore voice-activated prompts for tourniquet placement and wound packing, visual checks for possible limb or joint placement issues, and protocol-configurable pressure timers. Tourniquet time (TQ Time) could be captured automatically for responder confirmation.</p>
       </article>
       <article class="command-card">
         <div class="mono"><b>Hospital</b> &nbsp;Clinical concept</div>
-        <h3>Surgical and trauma-team cross-checks</h3>
+        <h3>Surgical Co-Pilot</h3>
         <p>Explore a responder-reviewed MIST handoff to receiving ER trauma teams, hands-free surgical checklists, and visual cross-checks of labeled vials and instruments as a second check for clinical staff.</p>
       </article>
     </div>
@@ -375,7 +375,7 @@ footer .left{display:flex;align-items:center;gap:22px}
   <div class="wrap">
     <div class="sec-head">
       <div><div class="mono"><b>05</b> &nbsp;Aerial awareness + CES 2027</div><h2>Second Look</h2></div>
-      <p>Second Look is a proposed aerial awareness module. It is designed to review frames from compatible NDAA-compliant drone test platforms and surface possible anomalies in a ground operator’s HUD for human review.</p>
+      <p>Second Look is a proposed, separate aerial awareness app for authorized teams. The concept reviews frames from compatible NDAA-compliant drone test platforms and flags possible anomalies for a ground operator to assess.</p>
     </div>
     <div class="command-cards">
       <article class="command-card">
@@ -481,7 +481,7 @@ footer .left{display:flex;align-items:center;gap:22px}
       <div>
         <div class="mono"><b>30-second concept film</b></div>
         <h3 id="military-demo-title">Haliax Command: Military Concept Demo</h3>
-        <p>A look at how Haliax Command could bring translation and situational alerts to a wearable display.</p>
+        <p>A look at how a separate Haliax Command military app could bring translation and situational alerts to a compatible wearable display.</p>
         <p class="concept-note">Simulated scenes illustrate planned capabilities, not field-test results. Not endorsed by the U.S. Army.</p>
         <details>
           <summary>Read the video transcript</summary>
@@ -531,7 +531,7 @@ footer .left{display:flex;align-items:center;gap:22px}
         <li class="reveal"><div class="mono">Hardware</div><div><strong>Platform-agnostic</strong><span>Designed to run across leading smart-glasses platforms, with no proprietary headset to buy.</span></div></li>
         <li class="reveal"><div class="mono">Processing</div><div><strong>On-device first</strong><span>Core analysis runs on the operator's phone, without depending on the cloud.</span></div></li>
         <li class="reveal"><div class="mono">Privacy</div><div><strong>Nothing stored by default</strong><span>Alerts, not archives. Built to respect the people around the operator.</span></div></li>
-        <li class="reveal"><div class="mono">Deployment</div><div><strong>Consumer to enterprise</strong><span>One core, scaled from individual protectors to full security teams.</span></div></li>
+        <li class="reveal"><div class="mono">Deployment</div><div><strong>Separate apps by job</strong><span>Each organization or user gets the app for their work, with its own feature permissions and hardware support.</span></div></li>
       </ul>
     </div>
   </div>
@@ -560,12 +560,12 @@ footer .left{display:flex;align-items:center;gap:22px}
   <div class="wrap">
     <div class="sec-head reveal">
       <div><div class="mono"><b>06</b> &nbsp;Development</div><h2 style="margin-top:18px">Technology roadmap</h2></div>
-      <p>Core phone software is in development. Hardware integration and role-based provisioning are next steps, with expanded workflows and pilots dependent on test results and partner approvals.</p>
+      <p>Phone-based awareness software is in development. Next steps include hardware testing and separate app packages, with additional workflows and pilots dependent on test results and partner approvals.</p>
     </div>
     <ol class="road">
       <li class="reveal now"><div class="mono"><b>Phase 01</b> · In progress</div><h3>Core software</h3><p>Phone app with audio awareness, live translation and scene awareness, each switched on and off by the operator.</p></li>
       <li class="reveal"><div class="mono"><b>Phase 02</b> · Next</div><h3>Hardware test lab</h3><p>Benchmark smart eyewear first, then test compatible drone hardware and telemetry.</p></li>
-      <li class="reveal"><div class="mono"><b>Phase 03</b> · Planned</div><h3>Controlled integration</h3><p>Validate role-based provisioning, compatible body-camera workflows, and the switch between live and review modes.</p></li>
+      <li class="reveal"><div class="mono"><b>Phase 03</b> · Planned</div><h3>Role-specific app releases</h3><p>Validate separate downloads, per-app access controls, industry database separation and compatible body-camera workflows.</p></li>
       <li class="reveal"><div class="mono"><b>Phase 04</b> · Proposed</div><h3>Partner-led validation</h3><p>Pursue field and clinical evaluations with qualified partners where appropriate, after required approvals.</p></li>
     </ol>
     <div class="fundraiser" id="fundraiser">
