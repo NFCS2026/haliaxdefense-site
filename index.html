@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Haliax Defense — Protective Consulting, Security Advisory &amp; Wearable Intelligence</title>
-<meta name="description" content="Haliax Defense provides executive protection consulting, security risk assessments, event and travel security planning and security awareness training, and develops wearable situational-awareness software.">
+<title>Haliax Command | Hardware-Agnostic Edge AI Platform</title>
+<meta name="description" content="Haliax Command is a patent-pending edge AI platform in development for smart eyewear, body cameras and drone feeds. Explore the CES 2027 hardware test lab.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://haliaxdefense.com/">
-<meta property="og:title" content="Haliax Defense — See first.">
-<meta property="og:description" content="Wearable intelligence software and protective consulting for security teams, executive protection and defense.">
+<meta property="og:title" content="Haliax Command | One Edge AI Software Layer">
+<meta property="og:description" content="A patent-pending platform in development for role-based situational awareness across compatible eyewear, body cameras and drone feeds.">
 <meta property="og:url" content="https://haliaxdefense.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://haliaxdefense.com/assets/hero.webp">
@@ -225,6 +225,40 @@ footer .foot-eagle{width:56px;opacity:.9}
 footer .left{display:flex;align-items:center;gap:22px}
 @media (max-width:980px){.svc{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){.svc,.train,.steps{grid-template-columns:1fr}.svc h3{margin-top:24px}}
+
+/* Haliax Command */
+.command-hero .wrap{padding-top:clamp(112px,17vh,185px);padding-bottom:clamp(38px,8vh,98px)}
+.command-hero::after{background:linear-gradient(90deg,rgba(10,11,12,.96) 3%,rgba(10,11,12,.73) 45%,rgba(10,11,12,.26) 100%),linear-gradient(0deg,var(--bg),transparent 60%)}
+.command-hero h1{max-width:985px;font-size:clamp(29px,4.3vw,62px);line-height:1.06;letter-spacing:-.035em;text-transform:none;margin:22px 0}
+.command-hero h1 em{display:block;margin-top:7px;font-size:.83em;line-height:1.1}
+@media(min-width:980px){.command-hero h1 .headline-unit{white-space:nowrap}}
+.command-hero p.lede{max-width:680px;font-size:clamp(16px,1.6vw,19px)}
+.command-hero .status{margin-top:16px}
+.command-hero .ctas{margin-top:25px}
+.command-hero .btn{min-height:48px;letter-spacing:.09em}
+.command-index{display:flex;gap:10px 24px;flex-wrap:wrap;margin-top:28px;padding-top:17px;border-top:1px solid var(--line2);max-width:850px}
+.command-index a,.command-link{color:var(--text);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:4px}
+.command-index a:hover,.command-link:hover{color:var(--amber)}
+.command-index a{padding:5px 0}
+.command-block{padding:clamp(56px,8vw,106px) 0;scroll-margin-top:72px}
+.command-block .sec-head{margin-bottom:32px}
+.command-block .sec-head h2{margin-top:12px;font-size:clamp(25px,3.35vw,45px)}
+.command-block .sec-head p{font-size:17px}
+.command-rail,.command-cards{display:grid;list-style:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.command-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.command-rail li,.command-card{padding:clamp(20px,3vw,32px);background:var(--bg2);min-width:0}
+.command-rail h3,.command-card h3{font-family:var(--font-display);font-size:clamp(17px,1.8vw,23px);line-height:1.25;margin:12px 0;color:var(--text)}
+.command-rail p,.command-card p,.command-card li,.command-caption{color:var(--muted)}
+.command-card ul{margin:14px 0 0;padding-left:1.15em}
+.command-card li+li{margin-top:8px}
+.command-caption{margin-top:19px;font-size:14px;max-width:780px}
+.command-card .command-link{display:inline-block;margin-top:18px}
+@media(max-width:760px){
+  .command-hero .wrap{padding-top:104px}
+  .command-hero h1 em{font-size:.96em}
+  .command-hero::after{background:linear-gradient(90deg,rgba(10,11,12,.9),rgba(10,11,12,.58)),linear-gradient(0deg,var(--bg),transparent 70%)}
+  .command-rail,.command-cards{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -245,21 +279,119 @@ footer .left{display:flex;align-items:center;gap:22px}
 </header>
 
 <main id="main">
-<section class="hero" id="top" style="border-top:0;padding:0">
+<section class="hero command-hero" id="top" style="border-top:0;padding:0">
   <img class="bg" src="assets/hero.webp" alt="Operator wearing smart glasses on a rooftop at night, overlooking a city" width="1920" height="1080" fetchpriority="high">
   <div class="hud mono" aria-hidden="true">
-    <div><span class="dot"></span>SYSTEM <b>ACTIVE</b></div>
-    <div>AUDIO ANALYTICS · <b>ON</b></div>
-    <div>VIDEO ANALYTICS · <b>ON</b></div>
+    <div><span class="dot"></span>HALIAX COMMAND <b>// IN DEVELOPMENT</b></div>
+    <div>EYEWEAR · BODY CAMERAS · DRONES</div>
   </div>
   <div class="wrap">
-    <div class="mono"><svg class="hm" viewBox="0 0 100 100" aria-hidden="true"><path d="M12 24 L24 12 L32 12 L32 88 L12 88 Z M68 12 L76 12 L88 24 L88 88 L68 88 Z M32 56 L50 45 L68 56 L68 67 L50 56 L32 67 Z" fill="currentColor"/><path fill="#F2A33A" d="M50 27 L56.5 33.5 L50 40 L43.5 33.5 Z"/></svg>Protective consulting &nbsp;//&nbsp; Security advisory &nbsp;//&nbsp; Wearable intelligence</div>
-    <h1>See<br><em>first.</em></h1>
-    <p class="lede">Executive protection consulting, security planning and training from operators with more than 20 years in the field, and the wearable-awareness software we build for teams like yours.</p>
+    <div class="mono"><b>Haliax Command</b> &nbsp;//&nbsp; Patent pending</div>
+    <h1>One Edge AI <span class="headline-unit">Software Layer.</span> <em>Every Mission, Clearance, and Hardware Endpoint.</em></h1>
+    <p class="lede">Haliax Command is a hardware-agnostic platform designed to provision real-time situational awareness, trauma support, and post-incident review across compatible smart eyewear, police body cameras, and NDAA-compliant drone platforms.</p>
+    <p class="mono status"><b>In development</b> &nbsp;·&nbsp; Hardware integrations planned</p>
     <div class="ctas">
-      <button class="btn" data-brief>Request a briefing</button>
-      <a class="btn ghost" href="#services">Our services</a>
+      <a class="btn" href="https://gofund.me/0aeb48cb3" target="_blank" rel="noopener noreferrer">Back Our CES 2027 Hardware Test Lab <span aria-hidden="true">↗</span></a>
+      <a class="btn ghost" href="#defense-commercial">Watch the concept film</a>
     </div>
+    <nav class="command-index mono" aria-label="Explore Haliax Command">
+      <a href="#architecture">Architecture</a>
+      <a href="#dual-mode">Dual-mode suite</a>
+      <a href="#calm-medic">Calm Medic</a>
+      <a href="#second-look">Second Look + CES</a>
+      <a href="#services">Our services</a>
+    </nav>
+  </div>
+</section>
+
+<section class="command-block" id="architecture">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="mono"><b>02</b> &nbsp;Core engine</div><h2>Role and clearance control</h2></div>
+      <p>The proposed Haliax Command Database is organized by role and security-clearance tier. It is designed to provision only the edge AI models and heads-up display (HUD) modules authorized for a user’s verified role, agency-defined clearance and active shift mode.</p>
+    </div>
+    <ol class="command-rail">
+      <li><div class="mono"><b>01</b> &nbsp;Authenticate</div><h3>Verify user and device</h3><p>A compatible device checks in with a verified user identity, an approved device identity, and an agency-managed assignment. Connecting a device does not grant access by itself.</p></li>
+      <li><div class="mono"><b>02</b> &nbsp;Provision</div><h3>Load only approved modules</h3><p>The role, clearance and mode determine which models and HUD modules can run on the endpoint or its paired edge device. The same policy can apply across supported eyewear, body cameras and drone feeds.</p></li>
+      <li><div class="mono"><b>03</b> &nbsp;Re-evaluate</div><h3>Reassign or revoke access</h3><p>The zero-trust design calls for rechecking authorization at shift handoff, revoking access on connected devices, and expiring time-limited access if a device is offline.</p></li>
+    </ol>
+    <p class="command-caption">The goal is fast shift reassignment without giving operators more access than they need. A clearance tier governs access inside Haliax Command; it does not confer a government security clearance or authorize classified workloads.</p>
+  </div>
+</section>
+
+<section class="command-block" id="dual-mode">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="mono"><b>03</b> &nbsp;Body cameras + tactical eyewear</div><h2>Two modes. One software layer.</h2></div>
+      <p>One policy layer is designed to switch compatible devices between on-shift assistance and authorized review or training. Live alerts and retrospective analysis serve different users and are governed separately.</p>
+    </div>
+    <div class="command-cards">
+      <article class="command-card">
+        <div class="mono"><b>Mode 01</b> &nbsp;Proposed</div>
+        <h3>Live Response Mode</h3>
+        <ul>
+          <li>Real-time audio watch-word alerts and multilingual speech translation.</li>
+          <li>Visual flags surface potential hazards or unusual activity for operator review.</li>
+          <li>Automatically prepare a structured EMS MIST handoff: mechanism of injury, injuries, signs and treatment, for responder verification and sharing.</li>
+        </ul>
+      </article>
+      <article class="command-card">
+        <div class="mono"><b>Mode 02</b> &nbsp;Proposed</div>
+        <h3>Training &amp; Liability Assessment Mode</h3>
+        <ul>
+          <li>Build a time-stamped timeline from authorized body-camera footage for post-incident review.</li>
+          <li>Help qualified reviewers examine use-of-force decisions and policy compliance against agency rules.</li>
+          <li>Identify moments to review for de-escalation and reuse approved scenarios in academy training.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="command-caption">The goal is better documentation, more consistent review and improved officer readiness. The software does not determine whether a use of force was lawful or make disciplinary decisions.</p>
+  </div>
+</section>
+
+<section class="command-block" id="calm-medic">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="mono"><b>04</b> &nbsp;Trauma + clinical workflow concepts</div><h2>Calm Medic</h2></div>
+      <p>A proposed voice and vision assistant for trained responders and clinicians, from documenting care at the point of injury to handing information to the next team.</p>
+    </div>
+    <div class="command-cards">
+      <article class="command-card">
+        <div class="mono"><b>Field</b> &nbsp;TCCC / STOP THE BLEED concepts</div>
+        <h3>Bleeding-control support</h3>
+        <p>Explore voice-activated prompts for tourniquet placement and wound packing, visual checks for possible limb or joint placement issues, and protocol-configurable pressure timers. Tourniquet time (TQ Time) could be captured automatically for responder confirmation.</p>
+      </article>
+      <article class="command-card">
+        <div class="mono"><b>Hospital</b> &nbsp;Clinical concept</div>
+        <h3>Surgical and trauma-team cross-checks</h3>
+        <p>Explore a responder-reviewed MIST handoff to receiving ER trauma teams, hands-free surgical checklists, and visual cross-checks of labeled vials and instruments as a second check for clinical staff.</p>
+      </article>
+    </div>
+    <p class="command-caption">Not for patient-care use. These concepts require clinical validation, applicable regulatory review and approval for use under local protocols. They do not replace training, clinical judgment, or required medication and instrument checks.</p>
+  </div>
+</section>
+
+<section class="command-block" id="second-look">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="mono"><b>05</b> &nbsp;Aerial awareness + CES 2027</div><h2>Second Look</h2></div>
+      <p>Second Look is a proposed aerial awareness module. It is designed to review frames from compatible NDAA-compliant drone test platforms and surface possible anomalies in a ground operator’s HUD for human review.</p>
+    </div>
+    <div class="command-cards">
+      <article class="command-card">
+        <div class="mono"><b>Hardware test lab</b> &nbsp;Benchmarking roadmap</div>
+        <h3>Test across real hardware</h3>
+        <p>The fundraiser supports smart-eyewear benchmarking first, then compatible drone test rigs and telemetry links. The goal is to test alert quality, latency and integration limits before field pilots.</p>
+        <a class="command-link" href="#roadmap">See the technology roadmap</a>
+      </article>
+      <article class="command-card">
+        <div class="mono"><b>Competition target</b> &nbsp;CES 2027</div>
+        <h3>U.S. Army xTech|Live at CES 2027</h3>
+        <p>Haliax Command is targeting xTech|Live at CES 2027. This does not imply a confirmed pitch slot, finalist selection, an Army partnership, or Army endorsement.</p>
+        <a class="command-link" href="https://xtech.army.mil/competition/xtechlive-at-ces-2027/" target="_blank" rel="noopener noreferrer">View the official xTech competition <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+    <p class="command-caption">NDAA compliance refers to the intended test hardware, subject to verification. It is not a certification of Haliax Command or a claim of current integration.</p>
   </div>
 </section>
 
@@ -317,7 +449,7 @@ footer .left{display:flex;align-items:center;gap:22px}
   <div class="wrap">
     <div class="sec-head reveal">
       <div><div class="mono"><b>03</b> &nbsp;Technology</div><h2 style="margin-top:18px">An intelligence layer for every operator</h2></div>
-      <p>Haliax turns off-the-shelf smart glasses into a force multiplier. It listens, watches and translates, then tells the operator only what matters.<span class="mono" style="display:block;margin-top:14px;color:var(--amber)">Patent Pending</span></p>
+      <p>The Haliax Command concept starts with audio awareness, translation and visual flags, with independent controls for each operator. The films show planned capabilities, not production deployments.</p>
     </div>
     <div class="grid4">
       <article class="cap reveal">
@@ -428,13 +560,13 @@ footer .left{display:flex;align-items:center;gap:22px}
   <div class="wrap">
     <div class="sec-head reveal">
       <div><div class="mono"><b>06</b> &nbsp;Development</div><h2 style="margin-top:18px">Technology roadmap</h2></div>
-      <p>Haliax is in active development. Partner capital moves every phase faster.</p>
+      <p>Core phone software is in development. Hardware integration and role-based provisioning are next steps, with expanded workflows and pilots dependent on test results and partner approvals.</p>
     </div>
     <ol class="road">
       <li class="reveal now"><div class="mono"><b>Phase 01</b> · In progress</div><h3>Core software</h3><p>Phone app with audio awareness, live translation and scene awareness, each switched on and off by the operator.</p></li>
-      <li class="reveal"><div class="mono"><b>Phase 02</b> · Next</div><h3>Smart-glasses integration</h3><p>Connecting the core to leading smart-glasses platforms.</p></li>
-      <li class="reveal"><div class="mono"><b>Phase 03</b> · Target 2027</div><h3>Field pilots</h3><p>Pilots with security, protection and event teams to prove performance in the field.</p></li>
-      <li class="reveal"><div class="mono"><b>Phase 04</b> · Planned</div><h3>Enterprise &amp; government</h3><p>Team management, training and offerings for contractors and agencies.</p></li>
+      <li class="reveal"><div class="mono"><b>Phase 02</b> · Next</div><h3>Hardware test lab</h3><p>Benchmark smart eyewear first, then test compatible drone hardware and telemetry.</p></li>
+      <li class="reveal"><div class="mono"><b>Phase 03</b> · Planned</div><h3>Controlled integration</h3><p>Validate role-based provisioning, compatible body-camera workflows, and the switch between live and review modes.</p></li>
+      <li class="reveal"><div class="mono"><b>Phase 04</b> · Proposed</div><h3>Partner-led validation</h3><p>Pursue field and clinical evaluations with qualified partners where appropriate, after required approvals.</p></li>
     </ol>
     <div class="fundraiser" id="fundraiser">
       <div>
