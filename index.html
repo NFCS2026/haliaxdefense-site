@@ -112,6 +112,16 @@ section{padding:clamp(80px,11vw,150px) 0;border-top:1px solid var(--line)}
 .sector h3{font-family:var(--font-display);font-weight:600;font-size:clamp(18px,1.8vw,24px);text-transform:uppercase;margin-bottom:12px}
 .sector p{color:var(--muted);font-size:15px;max-width:44ch}
 
+.concept-demo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);align-items:center;gap:clamp(22px,4vw,48px);margin-top:clamp(28px,5vw,56px);padding:clamp(20px,4vw,36px);border:1px solid var(--line2);background:var(--bg2);scroll-margin-top:88px}
+.concept-demo h3{font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.7vw,32px);line-height:1.18;margin:12px 0}
+.concept-demo p{color:var(--muted);max-width:56ch}
+.concept-demo .concept-note{margin-top:12px;font-size:14px}
+.concept-demo video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0a0b0c;border:1px solid var(--line2)}
+.concept-demo details{margin-top:16px;font-size:14px}
+.concept-demo summary{color:var(--amber);cursor:pointer}
+.concept-demo details p{margin-top:8px}
+.concept-demo :focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+@media (max-width:760px){.concept-demo{grid-template-columns:1fr}}
 .fundraiser{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 28px;margin-top:40px;padding:clamp(20px,4vw,32px);border:1px solid var(--line2);background:var(--bg2);scroll-margin-top:88px}
 .fundraiser h3{font-family:var(--font-display);font-weight:700;font-size:clamp(18px,2.5vw,24px);margin-bottom:8px}
 .fundraiser p{color:var(--muted);max-width:54ch}
@@ -326,6 +336,24 @@ footer .left{display:flex;align-items:center;gap:22px}
         <h3>Operator control</h3>
         <p>Audio and video analytics switch on and off independently. The operator decides, every time.</p>
       </article>
+    </div>
+    <div class="concept-demo" id="military-demo">
+      <div>
+        <div class="mono"><b>30-second concept film</b></div>
+        <h3 id="military-demo-title">Haliax Command: Military Concept Demo</h3>
+        <p>A look at how Haliax Command could bring translation and situational alerts to a wearable display.</p>
+        <p class="concept-note">Simulated scenes illustrate planned capabilities, not field-test results. Not endorsed by the U.S. Army.</p>
+        <details>
+          <summary>Read the video transcript</summary>
+          <p>Every mission runs on awareness. Haliax turns soldier-worn glasses into an intelligence layer. It hears what the squad misses and translates the local language, right in your ear. It reads the terrain and flags threats before they close in. Audio and video. Soldier controlled. Open by design. Ready for any platform. Haliax. See first.</p>
+          <p>The concept film shows a patrol, a perimeter alert, operator-controlled settings and an operations center.</p>
+        </details>
+      </div>
+      <video controls playsinline preload="none" poster="assets/haliax-military-concept.webp" width="1280" height="720" aria-labelledby="military-demo-title">
+        <source src="assets/haliax-military-concept.mp4" type="video/mp4">
+        <track src="assets/haliax-military-concept-en.vtt" kind="captions" srclang="en" label="English">
+        <a href="assets/haliax-military-concept.mp4">Open the Military Concept Demo video</a>
+      </video>
     </div>
   </div>
 </section>
