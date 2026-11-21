@@ -112,6 +112,12 @@ section{padding:clamp(80px,11vw,150px) 0;border-top:1px solid var(--line)}
 .sector h3{font-family:var(--font-display);font-weight:600;font-size:clamp(18px,1.8vw,24px);text-transform:uppercase;margin-bottom:12px}
 .sector p{color:var(--muted);font-size:15px;max-width:44ch}
 
+.fundraiser{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 28px;margin-top:40px;padding:clamp(20px,4vw,32px);border:1px solid var(--line2);background:var(--bg2);scroll-margin-top:88px}
+.fundraiser h3{font-family:var(--font-display);font-weight:700;font-size:clamp(18px,2.5vw,24px);margin-bottom:8px}
+.fundraiser p{color:var(--muted);max-width:54ch}
+.fundraiser .btn{border-color:var(--amber);min-height:44px}
+.fundraiser .btn:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+
 /* briefing */
 .brief{position:relative;overflow:hidden}
 .brief::before{content:"";position:absolute;inset:0;background:url(assets/command.webp) center/cover;opacity:.22;z-index:-1}
@@ -382,6 +388,13 @@ footer .left{display:flex;align-items:center;gap:22px}
       <li class="reveal"><div class="mono"><b>Phase 03</b> · Target 2027</div><h3>Field pilots</h3><p>Pilots with security, protection and event teams to prove performance in the field.</p></li>
       <li class="reveal"><div class="mono"><b>Phase 04</b> · Planned</div><h3>Enterprise &amp; government</h3><p>Team management, training and offerings for contractors and agencies.</p></li>
     </ol>
+    <div class="fundraiser" id="fundraiser">
+      <div>
+        <h3>CES 2027 benchmarking</h3>
+        <p>Help expand our test lab and benchmark Haliax Command on real hardware.</p>
+      </div>
+      <a class="btn ghost" href="https://gofund.me/0aeb48cb3" target="_blank" rel="noopener noreferrer">Support Haliax on GoFundMe <span aria-hidden="true">↗</span></a>
+    </div>
   </div>
 </section>
 
