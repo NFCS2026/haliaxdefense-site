@@ -99,6 +99,14 @@ section{padding:clamp(80px,11vw,150px) 0;border-top:1px solid var(--line)}
 .split figure{position:relative;border:1px solid var(--line)}
 .split figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .split figcaption{position:absolute;left:16px;bottom:14px}
+.split .commercial{min-width:0;background:var(--bg2);border-color:var(--line2);scroll-margin-top:88px}
+.split .commercial figcaption{position:static;padding:16px 18px;font-size:13px;color:var(--text)}
+.commercial figcaption span{display:block;margin-top:4px;color:var(--muted);font-size:11px}
+.commercial video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#0a0b0c}
+.commercial details{padding:12px 18px 16px;font-size:14px;color:var(--muted)}
+.commercial summary{color:var(--amber);cursor:pointer}
+.commercial details p{margin-top:8px}
+.commercial :focus-visible{outline:2px solid var(--amber);outline-offset:-3px}
 .specs{list-style:none;border-top:1px solid var(--line2)}
 .specs li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
 .specs li .mono{padding-top:3px}
@@ -368,9 +376,21 @@ footer .left{display:flex;align-items:center;gap:22px}
 
 <section id="platform">
   <div class="wrap split">
-    <figure class="reveal">
-      <img src="assets/perimeter.webp" alt="Operator scanning a port perimeter fence at night" width="1600" height="900" loading="lazy">
-      <figcaption class="mono"><svg class="hm" viewBox="0 0 100 100" aria-hidden="true"><path d="M12 24 L24 12 L32 12 L32 88 L12 88 Z M68 12 L76 12 L88 24 L88 88 L68 88 Z M32 56 L50 45 L68 56 L68 67 L50 56 L32 67 Z" fill="currentColor"/><path fill="#F2A33A" d="M50 27 L56.5 33.5 L50 40 L43.5 33.5 Z"/></svg>Perimeter // Night ops</figcaption>
+    <figure class="commercial" id="defense-commercial">
+      <figcaption class="mono" id="defense-commercial-title">
+        <b>Watch the Haliax Defense commercial</b>
+        <span>30-second concept film</span>
+      </figcaption>
+      <video controls playsinline preload="none" poster="assets/perimeter.webp" width="1280" height="720" aria-labelledby="defense-commercial-title">
+        <source src="assets/haliax-defense-commercial.mp4" type="video/mp4">
+        <track src="assets/haliax-defense-commercial-en.vtt" kind="captions" srclang="en" label="English">
+        <a href="assets/haliax-defense-commercial.mp4">Open the Haliax Defense commercial video</a>
+      </video>
+      <details>
+        <summary>Read the commercial transcript</summary>
+        <p>Every mission runs on awareness. Haliax turns smart glasses into an intelligence layer. It hears what you miss and translates any language, right in your ear. It reads the scene and flags threats before they reach you. Audio and video analytics. Operator controlled. Built for the field. Ready for any platform. Haliax. See first.</p>
+        <p>The concept film depicts example scenes and planned capabilities, not field-test results.</p>
+      </details>
     </figure>
     <div>
       <div class="mono reveal"><b>04</b> &nbsp;Platform</div>
